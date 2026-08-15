@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recognition_status",
+    "object_name",
+    "category",
+    "brand",
+    "brand_evidence",
+    "product_name",
+    "product_evidence",
+    "model",
+    "model_evidence",
+    "observed_text",
+    "visual_evidence",
+    "alternatives",
+    "self_reported_confidence"
+  ],
+  "properties": {
+    "recognition_status": {
+      "type": "string",
+      "enum": [
+        "identified",
+        "uncertain",
+        "unknown"
+      ]
+    },
+    "object_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "brand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "brand_evidence": {
+      "type": "string",
+      "enum": [
+        "visible_logo",
+        "visible_text",
+        "none"
+      ]
+    },
+    "product_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "product_evidence": {
+      "type": "string",
+      "enum": [
+        "visible_text",
+        "none"
+      ]
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_evidence": {
+      "type": "string",
+      "enum": [
+        "visible_model_marking",
+        "visible_text",
+        "none"
+      ]
+    },
+    "observed_text": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "visual_evidence": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "string"
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "object_name",
+          "reason"
+        ],
+        "properties": {
+          "object_name": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "self_reported_confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provider": {
+    "type": "llamacpp",
+    "base_url": "http://127.0.0.1:8080/v1",
+    "model": "qwen2.5-vl-3b",
+    "api_key": "local-no-key",
+    "timeout_s": 30.0,
+    "max_output_tokens": 320,
+    "temperature": 0.0
+  },
+  "capture_root": "../capture",
+  "queue_file": "queue.jsonl",
+  "poll_interval_ms": 100,
+  "latest_first": true,
+  "coalesce_same_object": true,
+  "quality": {
+    "small_side_px": 96,
+    "blur_laplacian_variance": 60.0,
+    "dark_mean": 25.0,
+    "bright_mean": 235.0
+  }
+}

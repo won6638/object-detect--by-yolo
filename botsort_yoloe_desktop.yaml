@@ -1,0 +1,18 @@
+# YOLOE-26 desktop BoT-SORT configuration.
+tracker_type: botsort
+
+track_high_thresh: 0.25
+track_low_thresh: 0.10
+new_track_thresh: 0.25
+
+track_buffer: 60
+match_thresh: 0.80
+fuse_score: True
+
+# Fixed desktop camera. Revisit for Quest head-motion.
+gmc_method: none
+
+proximity_thresh: 0.50
+appearance_thresh: 0.85
+with_reid: True
+model: auto

@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "object_capture",
+  "object_id": "obj_550e8400-e29b-41d4-a716-446655440000",
+  "capture_id": "cap_66b80f2f-58f3-4b98-bd94-9ce44a0a9121",
+  "request_id": "req_e733252e-44db-4813-ad1c-f1f1f8a78f18",
+  "timestamp": "2026-08-14T20:31:00.000+09:00",
+  "source": {
+    "device_type": "desktop_webcam",
+    "device_name": "prototype_desktop",
+    "camera_id": "camera_0",
+    "frame_width": 1280,
+    "frame_height": 720
+  },
+  "selection": {
+    "method": "yoloe_prompt_free",
+    "track_id": 17,
+    "display_id": 4,
+    "tracking_status": "TRACKING",
+    "bbox_px": {
+      "x1": 300,
+      "y1": 180,
+      "x2": 620,
+      "y2": 510
+    },
+    "bbox_normalized": {
+      "x1": 0.234375,
+      "y1": 0.25,
+      "x2": 0.484375,
+      "y2": 0.708333
+    },
+    "bbox_with_margin_px": {
+      "x1": 290,
+      "y1": 170,
+      "x2": 630,
+      "y2": 520
+    },
+    "crop_margin_ratio": 0.03
+  },
+  "detector": {
+    "model": "yoloe-26s-seg-pf.pt",
+    "family": "YOLOE-26",
+    "mode": "prompt_free_open_vocabulary_instance_segmentation",
+    "inference_size": 512,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.7,
+    "precision": "fp16",
+    "semantic_label_policy": "hint_only_not_ground_truth",
+    "class_id": 123,
+    "label_hint": "mouse",
+    "confidence": 0.61
+  },
+  "segmentation": {
+    "available": true,
+    "mask_file": "objects/obj_.../20260814_..._cap_.../mask.png",
+    "masked_file": "objects/obj_.../20260814_..._cap_.../masked.png",
+    "mask_area_px": 48321,
+    "crop_area_px": 119000,
+    "mask_coverage_ratio": 0.406059
+  },
+  "image": {
+    "original": {
+      "file": "objects/obj_.../20260814_..._cap_.../original.jpg",
+      "width": 340,
+      "height": 350,
+      "format": "jpg",
+      "jpeg_quality": 95
+    },
+    "llm": {
+      "file": "objects/obj_.../20260814_..._cap_.../llm.jpg",
+      "width": 340,
+      "height": 350,
+      "format": "jpg",
+      "jpeg_quality": 88,
+      "max_side_policy": 512,
+      "upscaled": false
+    }
+  },
+  "llm": {
+    "status": "pending",
+    "request": {
+      "request_id": "req_e733252e-44db-4813-ad1c-f1f1f8a78f18",
+      "task": "identify_object",
+      "yolo_hint": {
+        "class_name": "mouse",
+        "confidence": 0.61,
+        "policy": "hint_only_not_ground_truth",
+        "instruction": "Detector label is a hint only. The Vision LLM must judge the image independently."
+      },
+      "requested_fields": [
+        "recognition_status",
+        "object_name",
+        "category",
+        "brand",
+        "product_name",
+        "model",
+        "self_reported_confidence",
+        "visual_evidence",
+        "alternatives"
+      ]
+    },
+    "response": null,
+    "harness": {
+      "provider": null,
+      "model": null,
+      "tier": null,
+      "retry_count": 0,
+      "schema_valid": null,
+      "latency_ms": null,
+      "cross_model_agreement": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "vision_script": "yoloe_desktop_pipeline_v2_2_ui.py",
+  "tracker": "botsort_yoloe_desktop.yaml",
+  "model": "yoloe-26s-seg-pf.pt",
+  "harness_dir": "vlm_harness_qwen25vl_v1",
+  "harness_config": "harness_config.json",
+  "camera": 0,
+  "local_vlm_server": {
+    "enabled": true,
+    "exe": "C:\\llama.cpp\\llama-server.exe",
+    "repo": "ggml-org/Qwen2.5-VL-3B-Instruct-GGUF",
+    "alias": "qwen2.5-vl-3b",
+    "host": "127.0.0.1",
+    "port": 8080,
+    "gpu_layers": 99,
+    "context": 4096,
+    "startup_timeout_s": 90,
+    "extra_args": []
+  }
+}
