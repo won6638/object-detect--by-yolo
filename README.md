@@ -1,5 +1,7 @@
 # YOLO-VLM Vision Pipeline
 
+[한국어](README_KO.md) | **English**
+
 A modular real-time vision pipeline combining **YOLOE**, **BoT-SORT tracking**, user-selected object capture, and **local VLM inference with Qwen2.5-VL**.
 
 The system detects and tracks objects from a live camera feed, allows the user to select detected objects or manually define regions of interest, captures the selected visual information, and sends it asynchronously to a local Vision-Language Model for identification.
